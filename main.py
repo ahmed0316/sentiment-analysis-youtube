@@ -39,7 +39,7 @@ request = youtube.commentThreads().list(
     access_token=key   #API Key
 )
 response = request.execute()  #Get API Output (As Dictionary and Subdictionaries)
-
+values = response['items']
 #Convert api result to Pandas DataFrame
 data = pd.DataFrame()  #Create a blank DataFrame
 for x in range(len(values)):  #Loop through the data (0 --> length of the data)
